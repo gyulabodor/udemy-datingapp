@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210726191302_ExtendedUserEntity")]
+    [Migration("20210801173354_ExtendedUserEntity")]
     partial class ExtendedUserEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,6 +37,9 @@ namespace API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Gender")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Interests")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Introduction")
